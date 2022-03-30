@@ -1,0 +1,25 @@
+{
+  "name": "app-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "pros": "pm2 src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Barbosa Goncalves <brunoti.ads@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^6.1.1",
+    "cypher-tagged-templates": "^4.0.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "neo4j-driver": "^4.4.5",
+    "pm2": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,22 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  web:
+    container_name: web
+    restart: always
+    network_mode: host #if use its prop, have comment ports and links
+    build: ./app-backend
+    # ports:
+    #   - "3001:3001"
+    depends_on: 
+      - db
+    # links: 
+    #   - "db"
+  db:
+    container_name: db
+    restart: always
+    network_mode: host #if use its prop, have comment ports and links 
+    build: ./database
+    # ports:
+    #   - 7473:7473  
+    #   - 7474:7474  
+    #   - 7687:7687 
