@@ -3,5 +3,5 @@ app-backend/node_modules
 app-backend/package-lock.json
 
 #neo4j
-database/logs/*
-database/data/*
+/database/logs/*
+/database/data/*
