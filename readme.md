@@ -13,9 +13,9 @@
     - https://docs.docker.com/compose/install/
 
 ### Install and run
-    - Go to root project
-    - docker-compose build && docker-compose up
-        - Build and install all files
+    - Go to root project, build and install
+        - sudo
+        - docker-compose build && docker-compose up
     - http://localhost:3001/
         - Open site to create one range of fake data on neo4j database
     - http://0.0.0.0:7474/browser/
