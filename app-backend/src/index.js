@@ -14,15 +14,13 @@ const app =  express();
 
 app.get('/', async (req, res) =>{
 
+    //create database fake data
     const result = await fakeData()
-
-    return res.json({
-    'Relations': result.records[0].get('relations'),
-    'Labels': result.records[0].get('label'),
-    })
     
-
-
+    return res.send(`
+    Relations: ${result.records[0].get('relations')}
+    Labels: ${result.records[0].get('label')}
+    `)
 
 });
 

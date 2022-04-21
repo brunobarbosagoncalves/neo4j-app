@@ -1,6 +1,9 @@
 #backend
+app-backend/node_modules/*
 app-backend/node_modules
+app-backend/package-lock.json*
 app-backend/package-lock.json
+
 
 #neo4j
 /database/logs/*
