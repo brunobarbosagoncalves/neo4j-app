@@ -37,3 +37,68 @@
 
 ### Author
     - One simples engineer of software who like whats do
+
+
+### Simple commands
+
+    Execute all command in "http://localhost:7474/browser/" after clicked on connect
+
+Get all nodes
+```js
+    MATCH (p) RETURN *
+```
+
+Get all nodes with label "Person"
+```js
+    MATCH (p:Person) RETURN *
+```
+
+Get all nodes PERSON and nodes PET relations
+
+```js
+    MATCH (p:Person)-[r]->(pet:Pet) RETURN *
+``````
+
+Get all nodes PERSON and nodes MUSIC relations
+
+```js
+    MATCH (p:Person)-[r]->(m:Music) RETURN *
+```
+
+Get all nodes PERSON "Alessandra" and nodes MUSIC relations
+```js
+    MATCH (p:Person {name: "Alessandra Moraes Jr."})-[r]->(m:Music) RETURN *
+```
+Get all node relation start at: Person Alessandra with limit length of connections 5 on path
+```js
+    MATCH (p:Person {name: "Alessandra Moraes Jr."})-[r*0..5]-(m) RETURN *
+
+```
+
+Get short path between node "shortesPath is a algorithm internal" 
+```js
+    MATCH (p1:Person {name: "Isabel Xavier Jr."})
+    MATCH (p2:Person {name: "Sra. Antonella Pereira"})
+    MATCH path = shortestPath((p1)-[*]-(p2))
+    RETURN *
+```
+
+Update a node value
+
+```js
+    MATCH (p1:Person {name: "Isabel Xavier Jr."})
+    SET p1.age = 25
+    RETURN *
+```
+
+Delete node and relations by conditions 
+```js
+    MATCH (p:Pet {name:"Elísio",specie:"insect"})
+    DETACH DELETE p
+```
+
+### See more on  https://neo4j.com/developer/cypher/
+
+    This is a small example of NEO4J,you can use GDS(Graph Data Science), ML( Machine Learning), or APOC(Awesome Procedures On Cypher) to easy your life when write with neo4j
+
+
